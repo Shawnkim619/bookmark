@@ -1,7 +1,7 @@
 // 책갈피 service worker
 // 앱 파일은 "인터넷 먼저, 안 되면 저장본" 방식이라 새 버전을 올리면 다음에 열 때 바로 반영됩니다.
 const CACHE = "bookmark-v1";
-const SHELL = ["./", "./index.html", "./config.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png"];
+const SHELL = ["./", "./index.html", "./config.js", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));
